@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-privacy-cashshuffle-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHPRIV"
+      },
+      "tools": [
+        {
+          "name": "verify_bchpriv_invariants",
+          "description": "Verifies deterministic invariants for BCH Privacy CashShuffle AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchpriv_action",
+          "description": "Executes authenticated Privacy state transition."
+        }
+      ]
+    }
+  }
+}
